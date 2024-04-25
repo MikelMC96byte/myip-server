@@ -6,4 +6,7 @@ WORKDIR /app
 
 COPY build/linux/amd64/myipserver .
 
+RUN mkdir /data
+COPY data /data
+
 ENTRYPOINT ["/app/myipserver"]
